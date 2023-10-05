@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         RefreshList();
     }
 
-    private void RefreshList() {
+    void RefreshList() {
         SQLiteDatabase db = dbcenter.getReadableDatabase();
         cursor = db.rawQuery("SELECT * FROM biodata;", null);
         daftar = new String[cursor.getCount()];
